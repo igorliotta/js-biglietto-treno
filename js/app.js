@@ -27,11 +27,17 @@ let kmPrice = parseFloat(0.21);
 console.log(kmPrice);
 
 //         - Definire e dichiarare prezzo base.
-let basicPrice = kmDesiderati * kmPrice
-console.log(basicPrice);
-
 //             - prezzo base = numero km * prezzo per ogni km.
+let basicPrice = kmDesiderati * kmPrice;
+console.log(basicPrice);
 //     - sconto del 20% per i minorenni OR sconto del 40% per gli over 65.
+//         - Dichiaro una variabile per lo sconto del 20%.
+let sale20 = ((basicPrice * 20) / 100);
+console.log(sale20);
+
+//         - Dichiaro una variabile per lo sconto del 40%.
+let sale40 = ((basicPrice * 40) / 100);
+console.log(sale40);
   
 //   - Dichiarare una variabile prezzoScontato che coinciderà poi con la differenza tra le seguenti variabili, che terrà in considerazione del giusto sconto da applicare.
 

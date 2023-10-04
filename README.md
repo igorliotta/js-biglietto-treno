@@ -18,6 +18,8 @@
        - Definire e dichiarare prezzo base.
             - prezzo base = numero km * prezzo per ogni km.
     - sconto del 20% per i minorenni OR sconto del 40% per gli over 65.
+      - Dichiaro una variabile per lo sconto del 20%.
+      - Dichiaro una variabile per lo sconto del 40%.
   
   - Dichiarare una variabile prezzoScontato che coinciderà poi con la differenza tra le seguenti variabili, che terrà in considerazione del giusto sconto da applicare.
 
