@@ -40,17 +40,37 @@ let sale40 = ((basicPrice * 40) / 100);
 console.log(sale40);
   
 //   - Dichiarare una variabile prezzoScontato che coinciderà poi con la differenza tra le seguenti variabili, che terrà in considerazione del giusto sconto da applicare.
+let salePrice 
 
 //      - SE (l'utente ha < 18 anni) {
-//        allora lo sconto da applicare sarà del 20% }
+    if (userAge < 18) {
+        // allora lo sconto da applicare sarà del 20%
+        salePrice = basicPrice - sale20;
+        console.log(salePrice);
+    }
+//        
 //      - ALTRIMENTI SE (l'utente ha tra i 18 e i 64 anni) {
-//        allora non ci sarà nessuno sconto da applicare }
+    else if (userAge > 18 && userAge < 65) {
+        // allora non ci sarà nessuno sconto da applicare 
+        console.log("Non verrà applicato nessuno sconto")
+    }
+//        
 //      - ALTRIMENTI SE (l'utente ha > 65 anni) {
-//        allora lo sconto da applicare sarà del 40% }
+    else if (userAge > 65) {
+        // allora lo sconto da applicare sarà del 40% 
+        salePrice = basicPrice - sale40;
+        console.log(salePrice);
+    }
+//        
 
 //   - Effettuare la differenza tra queste variabili per definire infine il valore finale della variabile prezzoScontato.
-//      - prezzoScontato = prezzoIniziale - sconto
+//      - prezzoScontato = prezzoIniziale - sconto (20% o 40%).
+
+
 
 
 
 // ### Infine stampare il nostro prezzo sul documento, specificando massimo due cifre dopo la virgola.
+
+const messageDomElement = document.getElementById ('message'); 
+messageDomElement.innerHTML = salePrice;
