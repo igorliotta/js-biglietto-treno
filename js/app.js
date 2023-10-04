@@ -23,7 +23,7 @@ console.log(userAge);
 //     - età dell'utente che intende viaggiare.
 //     - prezzo base (0.21 € al km).
 //     - prezzo al km.
-let kmPrice = parseFloat(0.21);
+let kmPrice = 0.21;
 console.log(kmPrice);
 
 //         - Definire e dichiarare prezzo base.
@@ -32,35 +32,31 @@ let basicPrice = kmDesiderati * kmPrice;
 console.log(basicPrice);
 //     - sconto del 20% per i minorenni OR sconto del 40% per gli over 65.
 //         - Dichiaro una variabile per lo sconto del 20%.
-let sale20 = ((basicPrice * 20) / 100);
-console.log(sale20);
-
-//         - Dichiaro una variabile per lo sconto del 40%.
-let sale40 = ((basicPrice * 40) / 100);
-console.log(sale40);
-  
+//         - Dichiaro una variabile per lo sconto del 40%.  
 //   - Dichiarare una variabile prezzoScontato che coinciderà poi con la differenza tra le seguenti variabili, che terrà in considerazione del giusto sconto da applicare.
-let salePrice 
+// let salePrice 
 
 //      - SE (l'utente ha < 18 anni) {
-    if (userAge < 18) {
-        // allora lo sconto da applicare sarà del 20%
-        salePrice = basicPrice - sale20;
-        console.log(salePrice);
-    }
+if (userAge < 18) {
+    // allora lo sconto da applicare sarà del 20%
+    let sale20 = ((basicPrice * 20) / 100);
+    basicPrice = basicPrice - sale20;
+    console.log(basicPrice);
+}
 //        
 //      - ALTRIMENTI SE (l'utente ha tra i 18 e i 64 anni) {
-    else if (userAge > 18 && userAge < 65) {
-        // allora non ci sarà nessuno sconto da applicare 
-        console.log("Non verrà applicato nessuno sconto")
-    }
+else if (userAge > 18 && userAge < 65) {
+    // allora non ci sarà nessuno sconto da applicare 
+    console.log(basicPrice);
+}
 //        
 //      - ALTRIMENTI SE (l'utente ha > 65 anni) {
-    else if (userAge > 65) {
-        // allora lo sconto da applicare sarà del 40% 
-        salePrice = basicPrice - sale40;
-        console.log(salePrice);
-    }
+else if (userAge > 65) {
+    // allora lo sconto da applicare sarà del 40% 
+    let sale40 = ((basicPrice * 40) / 100);
+    basicPrice = basicPrice - sale40;
+    console.log(basicPrice);
+}
 //        
 
 //   - Effettuare la differenza tra queste variabili per definire infine il valore finale della variabile prezzoScontato.
@@ -73,4 +69,4 @@ let salePrice
 // ### Infine stampare il nostro prezzo sul documento, specificando massimo due cifre dopo la virgola.
 
 const messageDomElement = document.getElementById ('message'); 
-messageDomElement.innerHTML = salePrice;
+messageDomElement.innerHTML = basicPrice.toFixed(2);
