@@ -22,6 +22,15 @@ console.log(userAge);
 //     - km che si vogliono percorrere.
 //     - età dell'utente che intende viaggiare.
 //     - prezzo base (0.21 € al km).
+//     - prezzo al km.
+let kmPrice = parseFloat(0.21);
+console.log(kmPrice);
+
+//         - Definire e dichiarare prezzo base.
+let basicPrice = kmDesiderati * kmPrice
+console.log(basicPrice);
+
+//             - prezzo base = numero km * prezzo per ogni km.
 //     - sconto del 20% per i minorenni OR sconto del 40% per gli over 65.
   
 //   - Dichiarare una variabile prezzoScontato che coinciderà poi con la differenza tra le seguenti variabili, che terrà in considerazione del giusto sconto da applicare.
